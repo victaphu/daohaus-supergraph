@@ -2,6 +2,11 @@
 
 Caching dao data for all moloch daos summoned on daohaus.club.
 
+To get started, first install the graph cli:
+npm install -g @graphprotocol/graph-cli
+
+Go to https://thegraph.com/docs/developer/quick-start for more details
+
 ## Attribution
 
 This repo is heavily indebted to the work done by others:

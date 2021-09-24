@@ -207,6 +207,36 @@ module.exports.config = {
       },
     ],
   },
+  harmonyTest: {
+    dataSources: [
+      {
+        name: "v21Factory",
+        template: "v21Factory-ds.yaml",
+        address: "0xc496D6d772b581A7356576ebbA86453D530D81bf",
+        startBlock: 1,
+      },
+      {
+        name: "niftyMinionFactory",
+        template: "niftyMinionFactory-ds.yaml",
+        address: "0xc496D6d772b581A7356576ebbA86453D530D81bf",
+        startBlock: 2,
+      },
+    ],
+    templates: [
+      {
+        name: "v1Template",
+        template: "v1-template.yaml",
+      },
+      {
+        name: "v2Template",
+        template: "v2-template.yaml",
+      },
+      {
+        name: "v21Template",
+        template: "v21-template.yaml",
+      },
+    ],
+  },
   kovan: {
     dataSources: [
       {

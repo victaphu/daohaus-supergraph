@@ -47,17 +47,3 @@ export class MolochV21Template extends DataSourceTemplate {
     );
   }
 }
-
-export class SafeMinionTemplate extends DataSourceTemplate {
-  static create(address: Address): void {
-    DataSourceTemplate.create("SafeMinionTemplate", [address.toHex()]);
-  }
-
-  static createWithContext(address: Address, context: DataSourceContext): void {
-    DataSourceTemplate.createWithContext(
-      "SafeMinionTemplate",
-      [address.toHex()],
-      context
-    );
-  }
-}
