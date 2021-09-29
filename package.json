@@ -5,9 +5,9 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy:studio": "node manifests/deploy-prep.js rinkeby && graph deploy --studio daohaus",
-    "create-local": "graph create --node http://localhost:8020/ odyssy-automaton/daohaus",
-    "remove-local": "graph remove --node http://localhost:8020/ odyssy-automaton/daohaus",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 odyssy-automaton/daohaus",
+    "create-local": "graph create --node http://localhost:8020/ victaphu/daohaus",
+    "remove-local": "graph remove --node http://localhost:8020/ victaphu/daohaus",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 victaphu/daohaus",
     "build:all": "yarn codegen && yarn build",
     "prepare:harmonyTest": "node manifests/deploy-prep.js harmonyTest",
     "prepare:mainnet": "node manifests/deploy-prep.js mainnet",
@@ -23,6 +23,7 @@
     "deploy:rinkeby": "yarn prepare:rinkeby && yarn build:all && graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ odyssy-automaton/daohaus-rinkeby"
   },
   "dependencies": {
+    "@graphprotocol/graph-cli": "^0.20.0",
     "@graphprotocol/graph-ts": "^0.20.0",
     "js-yaml": "^3.13.1",
     "minimist": "^1.2.5"

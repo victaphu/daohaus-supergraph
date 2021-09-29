@@ -212,14 +212,20 @@ module.exports.config = {
       {
         name: "v21Factory",
         template: "v21Factory-ds.yaml",
-        address: "0xc496D6d772b581A7356576ebbA86453D530D81bf",
-        startBlock: 1,
+        address: "0x5F099659FA596c95B06Db8457748068F11F20AdE",
+        startBlock: 15148801,
       },
       {
         name: "niftyMinionFactory",
         template: "niftyMinionFactory-ds.yaml",
-        address: "0xc496D6d772b581A7356576ebbA86453D530D81bf",
-        startBlock: 2,
+        address: "0xD26b63F4668577f02317D9C1FC6B5bD5d5c29C2d",
+        startBlock: 15148862,
+      },
+      {
+        name: "minionFactory",
+        template: "minionFactory-ds.yaml",
+        address: "0xF1D62573deDbE7CBED757C2043861b2293D3184a",
+        startBlock: 15431703,
       },
     ],
     templates: [

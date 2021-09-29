@@ -8,9 +8,9 @@ dataSources:
     name: V21Factory
     network: harmonyTest
     source:
-      address: "0xc496D6d772b581A7356576ebbA86453D530D81bf"
+      address: "0x5F099659FA596c95B06Db8457748068F11F20AdE"
       abi: V21Factory
-      startBlock: 1
+      startBlock: 15148801
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -35,9 +35,9 @@ dataSources:
     name: NiftyMinionFactory
     network: harmonyTest
     source:
-      address: "0xc496D6d772b581A7356576ebbA86453D530D81bf"
+      address: "0xD26b63F4668577f02317D9C1FC6B5bD5d5c29C2d"
       abi: NiftyMinionFactory
-      startBlock: 2
+      startBlock: 15148862
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -52,6 +52,31 @@ dataSources:
         - event: SummonMinion(indexed address,indexed address,string,string,uint256)
           handler: handleSummonedNiftyMinion
       file: NiftyMinionFactory/NiftyMinionFactory.wasm
+  - kind: ethereum/contract
+    name: MinionFactory
+    network: harmonyTest
+    source:
+      address: "0xF1D62573deDbE7CBED757C2043861b2293D3184a"
+      abi: MinionFactory
+      startBlock: 15431703
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Moloch
+        - Minion
+      abis:
+        - name: V1Moloch
+          file: MinionFactory/abis/V1Moloch.json
+        - name: MinionFactory
+          file: MinionFactory/abis/MinionFactory.json
+        - name: Minion
+          file: MinionFactory/abis/Minion.json
+      eventHandlers:
+        - event: SummonMinion(indexed address,indexed address,string,string)
+          handler: handleSummonedMinion
+      file: MinionFactory/MinionFactory.wasm
 templates:
   - kind: ethereum/contract
     name: MolochV1Template
